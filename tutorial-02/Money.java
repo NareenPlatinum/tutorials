@@ -10,17 +10,38 @@ public class Money{
 
   
   public Money(){
-		// create an object with zero dollars and cents.
+  // create an object with zero dollars and cents.
+  dollars = 0;
+  cents = 0;
+  
   }
   
   public Money(int c){
-		// create an object with c cents
-		// (adjusting dollars and cents so that 0<=cents<=99)
+  // create an object with c cents
+  cents = c;
+  dollars = 0;
+  // (adjusting dollars and cents so that 0<=cents<=99)
+  
+ if ( cents>99){     
+      dollars = dollars +  c/100; 
+      cents = c%100;
+    }
+
+ 
   }
   
   public Money(int d, int c){
-		// create an object with d dollars and c cents
-		// (adjusting dollars and cents so that 0<=cents<=99)
+     // create an object with d dollars and c cents
+    dollars = d;
+    cents = c;
+    
+    // (adjusting dollars and cents so that 0<=cents<=99)
+    
+    if ( cents>99){     
+      dollars = d +  c/100; 
+      cents = c%100;
+    }
+     
   }
   
   
