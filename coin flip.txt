@@ -1,0 +1,28 @@
+
+
+public class CoinFlip {
+ 
+  public static void main(String[] args) { 
+    //counter for the number of times you get heads or tails
+    int heads = 0;
+    int tails = 0;
+ 	java.util.Random coin_side = new Random();
+
+    for(int i=0; i<100; i++){ // do it 100 times
+ 
+      //if (Math.random() < 0.5) {
+      if (//flip random number generation) {
+        
+        tails = tails +1;
+        
+      } 
+      else {
+        heads = heads +1;
+      }
+    }
+ 
+    //output
+    System.out.println("Amount Of Heads: " + heads);
+    System.out.println("Amount Of Tails: " + tails);
+  }
+}
