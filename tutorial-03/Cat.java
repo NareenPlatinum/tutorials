@@ -1,14 +1,23 @@
 public class Cat extends Animal{
-  
-	protected String name;
-	protected int    birthYear;
-	public String getName(){ return this.name; }
-	public int    getBirthyear(){ return this.birthYear; }
-  public abstract String noise();
 
-	public Animal(String name, int year){
-		this.name = name;
-		this.birthYear = year;
-	}
+ //public abstract class Cat(String name, int year){
+ 
+ public Cat(String name, int year){
+   super(name,year);
+ }
   
+ public String noise(){
+   //declare string used for noise
+   String catNoise;
+   //choose meow or purr
+   if(Math.random() < 0.5){
+    catNoise = ("Meow");
+   }
+   else{
+    catNoise = ("Purrr");
+   }
+   //return string
+   return catNoise;
+ }
+ 
 }
