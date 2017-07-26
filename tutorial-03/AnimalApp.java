@@ -1,3 +1,9 @@
+/**
+ * 
+ * @author Nareen Khurshid
+ * 
+ * 
+ */
 import java.util.Random;
 import java.util.Calendar;
 /** COMP 1006/1406 Tutorial Material*/
@@ -25,20 +31,25 @@ public class AnimalApp{
   // use random names from the `names` array   
   // use random birth years          
   for(int i=0; i<SIZE; i+=1){
-   if(Math.random() < 1.0/4.0){
+   if(Math.random() < 1.0/6.0){
     animals[i] = new Cat( names[rnd.nextInt(names.length)], rnd.nextInt(12) + 2000);
    }
-   else if(Math.random() < 2.0/4.0) {
+   else if(Math.random() < 2.0/6.0) {
     animals[i] = new Owl( names[rnd.nextInt(names.length)], rnd.nextInt(14) + 2000, true);
    }
    
-   else if(Math.random() < 3.0/4.0) { 
+   else if(Math.random() < 3.0/6.0) { 
     animals[i] = new Owl( names[rnd.nextInt(names.length)], rnd.nextInt(14) + 2000, false);
+   }
+   
+   else if(Math.random() < 5.0/6.0) { 
+    animals[i] = new Husky( names[rnd.nextInt(names.length)], rnd.nextInt(14) + 2000);
    }
    
    else{
     animals[i] = new Dog( names[rnd.nextInt(names.length)], rnd.nextInt(14) + 2000);
    }
+   
   }
   
   for(Animal animal: animals){
