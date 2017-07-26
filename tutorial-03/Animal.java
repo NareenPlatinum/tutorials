@@ -62,7 +62,9 @@ public abstract class Animal{
 	/* override Object's toString method here */
 	@Override
 	public String toString(){
-		return "empty"; 
+		return "name: " + this.name + "Year: " + this.birthYear;  
+		return "name: " + name + "Year: " + year;
 	}
+	
 
 }
